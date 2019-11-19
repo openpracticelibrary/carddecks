@@ -1,5 +1,8 @@
+# version
+This is version 3.0
+
 # carddecks
-This repository includes printing materials used to print card decks for the Open Practice Library. It includes print ready and raw files for cards, tuck box and leaflet insert.
+This repository includes working and printing materials used to edit and print card decks for the Open Practice Library. It includes the print ready as well as editable files for cards, tuck box and leaflet insert. The files are organized in the directories working_files and print_ready_files. If you simply want to print the decks, please use the versions in print_ready_files in contact with your printer - these Adobe Illustrator files have been prepared for printing with the text converted to outlines. If you want to edit the files it is better to use the copies in working_files, where the Adobe Illustrator files have editable text.
 
 
 
@@ -11,7 +14,7 @@ You will need Adobe Illustrator (or similar) with license to edit the files and 
 # Printing cards
 When working with printing companies, the spec below is what has been used to order card decks.
 
-description - Personalised both sides. Printed full Colour & Plastic Coated. Cut to shape, collated in to decks. Cello wrapping not included. Poker card sized 16 page leaflet, printed double sided on 110gsm silk art. Inserted in to personalised tuck boxes printed full colour on 350gsm Zanta Box Board matt laminated. 
+description - Personalised both sides. Printed full Colour & Plastic Coated. Cut to shape, collated in to decks. Cello wrapping not included. Poker card sized 16 page leaflet, printed double sided on 110gsm silk art. Inserted in to personalised tuck boxes printed full colour on 350gsm Zanta Box Board matt laminated.
 
 Size -88 x 63mm with radius corners.
 
