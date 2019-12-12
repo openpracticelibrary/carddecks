@@ -1,49 +1,41 @@
 # version & changelog
-This is version 3.1
+This is version 3.2
 
-- Changelog created (hence no previous version has this)
-- Continuous Integration
-  - Title (both sides) changed:
-    - From: Continious Integration
-    - To: Continuous Integration
-- Realtime Retrospective
+Changes since version 3.1:
+- Merging changes done in another version from Kari Mayhew, see below:
+- Domain Storytelling
+  - Participants changed
+    - From Product owner
+    - To: Product Owner
+- Start at the End
+  - Title changed (both sides)
+    - From: Start At the End
+    - To: Start at the End
+- Pair Programming
+  - Title Changed (both sides)
+    - From: Pair programming
+    - To: Pair Programming
+- Stop the World Event
+  - Title Changed (both sides)
+    - From: Stop The World Event
+    - To: Stop the World Event
+- Test Automation
+  - Category Update (both sides)
+    - From: Culture & Collaboration
+    - To: Technical
+  - Mobius loop placement changed
+    - From: Culture & Collaboration
+    - To: Technical
+- Containers
   - Description changed
-    - From: Save everything as code - conﬁguration, infrastructure and pipelines
-    - To: Getting feedback faster and improving the overall experience of your event
-- Continuous Delivery
+    - From: [...] software needs to run.
+    - To: [...] software needs to run
+- Design of Experiments
   - Description changed
-    - From: A software package that contains everything the software needs to run.
-    - To: Automated testing and release of software
-- Canary releases
-  - Description changed
-    - From: Mind the early warnings
-    - To: Exposing a small number of real users to a new version
-- Dark launches
-  - Description changed
-    - From: Only for those in the know
-    - To: Letting a small group of interested users test features before others
-- Split Testing - A/B Testing
-  - Title changed
-    - From: Split Testing - A/B Testing
-    - To: A/B Testing
-  - Description changed
-    - From: The easiest path to validated learning
-    - To: Quantitative testing of two alternative designs to learn which better leads to a specific goal
-- Split Testing - Multivari Testing
-  - Title changed
-    - From: Split Testing - Multivari Testing
-    - To: Multivariate Testing
-  - Description changed
-    - From: Testing for multiple factors changing together
-    - To: Quantitatively test how multiple factors influence the success of a design
-- Kano Model
-  - Description changed
-    - From: Analysis & Matrix
-    - To: A model to help prioritize features
-- Design Sprint
-  - Description changed
-    - From: Google Design Sprint
-    - To: A sprint to clarify the problem and explore solutions
+    - From: Learn Fast Move Even Faster
+    - To: Learn fast and move even faster
+
+
 
 
 # carddecks
