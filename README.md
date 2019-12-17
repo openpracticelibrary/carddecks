@@ -1,8 +1,8 @@
 # version & changelog
-This is version 3.3
+This is version 3.4
 
-Changes since version 3.2:
-- Removed Barclays logo from all cards that had it (white side)
+Changes since version 3.3:
+- Updated the section "Updating card files" in the README.md file.
 
 
 
@@ -13,7 +13,13 @@ This repository includes working and printing materials used to edit and print c
 
 
 # Updating card files
-You will need Adobe Illustrator (or similar) with license to edit the files and customise the content.
+You will need Adobe Illustrator (or similar) with license to edit the files and customise the content. Please make sure to follow the below process when making any changes:
+1. Always edit the file "working_files/cards - layout.ai"
+2. When you're done editing, save the file.
+3. Select all objects and convert all text to outlines (Menu Type / Create Outlines). NB! Do NOT save the file at this point!
+4. Choose Menu File / Save As... to save the file as a copy in the print_ready_files directory. Name the file "cards - layout - print - v.X.Y.ai", where "X.Y" is the next version. For smaller changes, just increment the Y by one, for larger changes, increment X and reset Y to 0.
+5. Convert the print ready .ai file to pdf and also save it in the print_ready_files directory, with the same name except for the .pdf suffix.
+6. Commit and push your change and issue a Pull Request.
 
 
 
