@@ -1,7 +1,7 @@
 # version & changelog
-This is version 3.4
+This is version 3.4.1
 
-Changes since version 3.3:
+Changes since version 3.4:
 - Updated the section "Updating card files" in the README.md file.
 
 
@@ -17,8 +17,9 @@ You will need Adobe Illustrator (or similar) with license to edit the files and 
 1. Always edit the file "working_files/cards - layout.ai"
 2. When you're done editing, save the file.
 3. Select all objects and convert all text to outlines (Menu Type / Create Outlines). NB! Do NOT save the file at this point!
-4. Choose Menu File / Save As... to save the file as a copy in the print_ready_files directory. Name the file "cards - layout - print - v.X.Y.ai", where "X.Y" is the next version. For smaller changes, just increment the Y by one, for larger changes, increment X and reset Y to 0.
+4. Choose Menu File / Save As... to save the file as a copy in the print_ready_files directory. Name the file "cards - layout - print - v.X.Y.ai", where "X.Y" is the next version. For smaller changes, just increment the Y by one, for larger changes, increment X and reset Y to 0. For minor changes outside the actual product files (e.g. small changes in the readme file), just add a Z-version number, e.g. 3.4.1.
 5. Convert the print ready .ai file to pdf and also save it in the print_ready_files directory, with the same name except for the .pdf suffix.
+7. Update README.md with the correct version number and replace the "changes since last version" with a clear description of what you changed.
 6. Commit and push your change and issue a Pull Request.
 
 
