@@ -1,39 +1,8 @@
 # version & changelog
-This is version 3.2
+This is version 3.3
 
-Changes since version 3.1:
-- Merging changes done in another version from Kari Mayhew, see below:
-- Domain Storytelling
-  - Participants changed
-    - From Product owner
-    - To: Product Owner
-- Start at the End
-  - Title changed (both sides)
-    - From: Start At the End
-    - To: Start at the End
-- Pair Programming
-  - Title Changed (both sides)
-    - From: Pair programming
-    - To: Pair Programming
-- Stop the World Event
-  - Title Changed (both sides)
-    - From: Stop The World Event
-    - To: Stop the World Event
-- Test Automation
-  - Category Update (both sides)
-    - From: Culture & Collaboration
-    - To: Technical
-  - Mobius loop placement changed
-    - From: Culture & Collaboration
-    - To: Technical
-- Containers
-  - Description changed
-    - From: [...] software needs to run.
-    - To: [...] software needs to run
-- Design of Experiments
-  - Description changed
-    - From: Learn Fast Move Even Faster
-    - To: Learn fast and move even faster
+Changes since version 3.2:
+- Removed Barclays logo from all cards that had it (white side)
 
 
 
