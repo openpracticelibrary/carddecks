@@ -1,13 +1,13 @@
 # version & changelog
-This is version 3.4.2
+This is version 3.4.3
 
-Changes since version 3.4.1:
+Changes since version 3.4.2:
 - Addressed issues
-	- #2 Product Stategy Guide Card Removed
-	- #3 Instruction Card added
-	- #3 Library History Card added
-	- #6 Contribution to Libraru Card added
-	- #9 Team Shared History Card Removed
+	- #11 Add new practice card - System Diagram
+	- #12 Add new practice card - Proto-Persona
+	- #13 Add new practice card - Start with Why
+	- #14 Add new practice card - Affinity Mapping
+	- #15 Add new practice card - Carzy 8s
 
 
 
