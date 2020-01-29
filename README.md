@@ -1,8 +1,13 @@
 # version & changelog
-This is version 3.4.1
+This is version 3.4.2
 
-Changes since version 3.4:
-- Updated the section "Updating card files" in the README.md file.
+Changes since version 3.4.1:
+- Addressed issues
+	- #2 Product Stategy Guide Card Removed
+	- #3 Instruction Card added
+	- #3 Library History Card added
+	- #6 Contribution to Libraru Card added
+	- #9 Team Shared History Card Removed
 
 
 
