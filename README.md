@@ -7,7 +7,7 @@ Changes since version 3.4.2:
 	- #12 Add new practice card - Proto-Persona
 	- #13 Add new practice card - Start with Why
 	- #14 Add new practice card - Affinity Mapping
-	- #15 Add new practice card - Carzy 8s
+	- #15 Add new practice card - Carzy 8's
 
 
 
