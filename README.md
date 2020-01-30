@@ -1,8 +1,13 @@
 # version & changelog
-This is version 3.4.1
+This is version 3.4.3
 
-Changes since version 3.4:
-- Updated the section "Updating card files" in the README.md file.
+Changes since version 3.4.2:
+- Addressed issues
+	- #11 Add new practice card - System Diagram
+	- #12 Add new practice card - Proto-Persona
+	- #13 Add new practice card - Start with Why
+	- #14 Add new practice card - Affinity Mapping
+	- #15 Add new practice card - Carzy 8s
 
 
 
