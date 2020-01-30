@@ -1,13 +1,9 @@
 # version & changelog
-This is version 3.4.3
+This is version 3.4.4
 
-Changes since version 3.4.2:
+Changes since version 3.4.3:
 - Addressed issues
-	- #11 Add new practice card - System Diagram
-	- #12 Add new practice card - Proto-Persona
-	- #13 Add new practice card - Start with Why
-	- #14 Add new practice card - Affinity Mapping
-	- #15 Add new practice card - Carzy 8's
+	- #39 removing visioning card from the deck
 
 
 
