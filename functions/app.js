@@ -5,7 +5,7 @@ const app = express();
 const axios = require('axios');
 const fontMatter = require('parser-front-matter');
 const router = express.Router();
-const { parse } = require('json2csv');
+// const { parse } = require('json2csv');
 
 const BASE_URL =
   'https: //api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice';
@@ -77,12 +77,11 @@ router.get('/data', (req, res) => {
         });
       });
       req.query.type == 'json' ? res.send(response) : '';
-      // TODO - add parser for CSV
-      const csv = parse(response, opts);
-      console.log(csv);
-      // res.attachment('card-data.csv');
-      res.header('Content-Type', 'text/csv');
-      res.status(200).send(csv);
+      // // TODO - add parser for CSV
+      // const csv = parse(response, opts);
+      // console.log(csv);
+      // res.header('Content-Type', 'text/csv');
+      // res.status(200).send(csv);
     })
     .catch(error => {
       // return error
