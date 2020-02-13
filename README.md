@@ -25,6 +25,25 @@ You will need Adobe Illustrator (or similar) with license to edit the files and 
 
 
 
+# carddecks - api
+To generate unique QR codes for each practice, call the QR code api. It will return a list of URLS pointing to the QR code that's been gernerated.
+```
+$ curl https://elastic-tereshkova-38a5c3.netlify.com/.netlify/functions/qr/qrcode
+
+OR to specify the size of QR code in pixels (defaults to '[100]x[100]'):
+$ curl https://elastic-tereshkova-38a5c3.netlify.com/.netlify/functions/qr/qrcode?size=[50]x[50]
+```
+
+To generate a JSON or CSV of the metadata from each practice call the following end point
+```
+$ curl https://elastic-tereshkova-38a5c3.netlify.com/.netlify/functions/app/data\?type\=json
+
+OR
+$ curl https://elastic-tereshkova-38a5c3.netlify.com/.netlify/functions/app/data\?type\=csv > all-data.csv
+```
+
+
+
 # Printing cards
 When working with printing companies, the spec below is what has been used to order card decks.
 

@@ -1,0 +1,23 @@
+{
+  "name": "carddecks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions/app.js",
+  "scripts": {
+    "build": "netlify-lambda build functions",
+    "start": "nodemon server-local.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "front-matter": "^3.1.0",
+    "json2csv": "^4.5.4",
+    "netlify-lambda": "^1.6.3",
+    "nodemon": "^1.19.2",
+    "parser-front-matter": "^1.6.4",
+    "serverless-http": "^2.3.0"
+  },
+  "dependencies": {}
+}
