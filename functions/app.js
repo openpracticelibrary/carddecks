@@ -3,7 +3,7 @@ const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
 const axios = require('axios');
-const fontMatter = require('parser-front-matter');
+// const fontMatter = require('parser-front-matter');
 const router = express.Router();
 // const { parse } = require('json2csv');
 
@@ -55,26 +55,27 @@ router.get('/data', (req, res) => {
         const fileContent = new Buffer(item.data.content, 'base64').toString(
           'ascii'
         );
-        fontMatter.parse(fileContent, function(err, file) {
-          if (err) {
-            console.log(err);
-            res.send(err);
-          }
-          // trim extra stuff from the metadata
-          delete file.data.date;
-          delete file.data.authors;
-          delete file.data.icon;
-          delete file.data.jumbotron;
-          delete file.data.jumbotronAlt;
-          delete file.data.perspectives;
-          file.data.participants = file.data.participants
-            ? file.data.participants.join('#')
-            : '';
-          // add url
-          // TODO - FIX URL with correct filename
-          file.data.url = `https://openpracticelibrary.com/practice/${file.data.title}`;
-          response.push(file.data);
-        });
+        // fontMatter.parse(fileContent, function (err, file) {
+        //   if (err) {
+        //     console.log(err);
+        //     res.send(err);
+        //   }
+        //   // trim extra stuff from the metadata
+        //   delete file.data.date;
+        //   delete file.data.authors;
+        //   delete file.data.icon;
+        //   delete file.data.jumbotron;
+        //   delete file.data.jumbotronAlt;
+        //   delete file.data.perspectives;
+        //   file.data.participants = file.data.participants ?
+        //     file.data.participants.join('#') :
+        //     '';
+        //   // add url
+        //   // TODO - FIX URL with correct filename
+        //   file.data.url = `https://openpracticelibrary.com/practice/${file.data.title}`;
+        //   response.push(file.data);
+        // });
+        response.push(fileContent);
       });
       req.query.type == 'json' ? res.send(response) : '';
       // // TODO - add parser for CSV
