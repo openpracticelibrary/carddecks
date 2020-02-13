@@ -11,6 +11,7 @@ const {
 
 const BASE_API_URL =
   'https://api.github.com/repos/springdo/openpracticelibrary/contents/content/practice?ref=master';
+const OPL_BASE_URL = 'https://openpracticelibrary.com/practice/'
 
 let allFilePaths = [];
 
@@ -48,7 +49,7 @@ router.get('/data', (req, res) => {
 
   let allFileLocations = [];
   axios.get(BASE_API_URL, options).then(fileLocations => {
-      console.log(fileLocations)
+      // console.log(fileLocations)
       allFileLocations = fileLocations.data;
       allFileLocations.forEach(file => {
         allFilePaths.push(axios.get(`${file.url}`, options));
@@ -74,12 +75,14 @@ router.get('/data', (req, res) => {
               '';
             // add url
             // TODO - FIX URL with correct filename
-            content.attributes.url = `${allFileLocations[index].html_url}`;
+
+            let name = allFileLocations[index].name.substring(0, allFileLocations[index].name.length - 3)
+            content.attributes.url = `${OPL_BASE_URL}${name}/`;
             response.push(content.attributes);
           });
           // TODO - add parser for CSV
           const csv = parse(response, opts);
-          console.info(csv);
+          // console.info(csv);
           req.query.type == 'json' ?
             res.header('Content-Type', 'application/json') : res.header('Content-Type', 'text/csv');
           req.query.type == 'json' ? res.status(200).send(response) : res.status(200).send(csv);
