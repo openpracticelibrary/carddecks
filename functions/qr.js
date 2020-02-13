@@ -6,7 +6,7 @@ const axios = require('axios');
 const router = express.Router();
 
 const BASE_API_URL =
-  'https://api.github.com/repos/springdo/openpracticelibrary/contents/content/practice?ref=master';
+  'https://api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice?ref=master';
 
 const OPL_BASE_URL = 'https://openpracticelibrary.com/practice/'
 

@@ -10,7 +10,7 @@ const {
 } = require('json2csv');
 
 const BASE_API_URL =
-  'https://api.github.com/repos/springdo/openpracticelibrary/contents/content/practice?ref=master';
+  'https://api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice?ref=master';
 const OPL_BASE_URL = 'https://openpracticelibrary.com/practice/'
 
 let allFilePaths = [];
