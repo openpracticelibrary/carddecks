@@ -6,8 +6,9 @@ const axios = require('axios');
 const fm = require('front-matter');
 const router = express.Router();
 const {
-  parse
+  Parser
 } = require('json2csv');
+
 const bufferFrom = require('buffer-from')
 
 const BASE_API_URL =
@@ -48,6 +49,11 @@ const fields = [{
 const opts = {
   fields
 };
+
+const json2csvParser = new Parser({
+  quote: '',
+  fields
+});
 
 const options = {
   headers: {
@@ -114,7 +120,7 @@ router.get('/data', (req, res) => {
             response.push(backOfCard);
           });
           // TODO - add parser for CSV
-          const csv = parse(response, opts);
+          const csv = json2csvParser.parse(response, opts);
           // console.info(csv);
           req.query.type == 'json' ?
             res.header('Content-Type', 'application/json') : res.header('Content-Type', 'text/csv');
