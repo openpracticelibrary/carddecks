@@ -63,16 +63,16 @@ router.get('/data', (req, res) => {
         delete content.attributes.jumbotron;
         delete content.attributes.jumbotronAlt;
         delete content.attributes.perspectives;
-        content.attributes.participants = content.attributes.participants ?
-          content.attributes.participants.join('#') :
-          '';
+        content.attributes.participants = content.attributes.participants
+          ? content.attributes.participants.join('#')
+          : '';
         // add url
         // TODO - FIX URL with correct filename
         content.attributes.url = `https://openpracticelibrary.com/practice/${content.attributes.title}`;
         response.push(content.attributes);
       });
       req.query.type == 'json' ? res.send(response) : '';
-      // // TODO - add parser for CSV
+      // TODO - add parser for CSV
       // const csv = parse(response, opts);
       // console.log(csv);
       // res.header('Content-Type', 'text/csv');
