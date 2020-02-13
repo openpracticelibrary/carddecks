@@ -5,9 +5,7 @@ const app = express();
 const axios = require('axios');
 const fontMatter = require('parser-front-matter');
 const router = express.Router();
-const {
-  parse
-} = require('json2csv');
+const { parse } = require('json2csv');
 
 const BASE_URL =
   'https: //api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice';
@@ -44,21 +42,6 @@ const someurls = [
   'https://api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice/yes-and.md'
 ];
 
-
-
-router.get('/', (req, res) => {
-  res.writeHead(200, {
-    'Content-Type': 'application/json'
-  });
-  res.write('<h1>Hello from Express.js!</h1>');
-  res.end();
-});
-router.get('/another', (req, res) => res.json({
-  route: req.originalUrl
-}));
-
-
-
 router.get('/data', (req, res) => {
   // allFilePaths.push(axios.get(`https://api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice/${element.name}`, options))
   someurls.forEach(name => {
@@ -72,9 +55,11 @@ router.get('/data', (req, res) => {
         const fileContent = new Buffer(item.data.content, 'base64').toString(
           'ascii'
         );
-        fontMatter.parse(fileContent, function (err, file) {
-          console.log(err);
-          if (err) res.send(err);
+        fontMatter.parse(fileContent, function(err, file) {
+          if (err) {
+            console.log(err);
+            res.send(err);
+          }
           // trim extra stuff from the metadata
           delete file.data.date;
           delete file.data.authors;
@@ -82,19 +67,21 @@ router.get('/data', (req, res) => {
           delete file.data.jumbotron;
           delete file.data.jumbotronAlt;
           delete file.data.perspectives;
-          file.data.participants = file.data.participants ? file.data.participants.join('#') : ''
+          file.data.participants = file.data.participants
+            ? file.data.participants.join('#')
+            : '';
           // add url
           // TODO - FIX URL with correct filename
           file.data.url = `https://openpracticelibrary.com/practice/${file.data.title}`;
           response.push(file.data);
         });
       });
-      (req.query.type == 'json') ? res.send(response): '';
+      req.query.type == 'json' ? res.send(response) : '';
       // TODO - add parser for CSV
       const csv = parse(response, opts);
       console.log(csv);
       // res.attachment('card-data.csv');
-      res.header("Content-Type", "text/csv");
+      res.header('Content-Type', 'text/csv');
       res.status(200).send(csv);
     })
     .catch(error => {
@@ -104,9 +91,7 @@ router.get('/data', (req, res) => {
     });
 
   // allFilePaths.push(axios.get(`https://api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice/${element.name}`, options))
-
-})
-
+});
 
 app.use('/.netlify/functions/app', router); // path must route to lambda
 
