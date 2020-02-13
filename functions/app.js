@@ -73,12 +73,12 @@ router.get('/data', (req, res) => {
         content.attributes.url = `https://openpracticelibrary.com/practice/${content.attributes.title}`;
         response.push(content.attributes);
       });
-      req.query.type == 'json' ? res.send(response) : '';
       // TODO - add parser for CSV
       const csv = parse(response, opts);
       console.log(csv);
-      res.header('Content-Type', 'text/csv');
-      res.status(200).send(csv);
+      req.query.type == 'json' ?
+        res.header('Content-Type', 'application/json') : res.header('Content-Type', 'text/csv');
+      req.query.type == 'json' ? res.status(200).send(response) : res.status(200).send(csv);
     })
     .catch(error => {
       // return error
