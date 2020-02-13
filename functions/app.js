@@ -15,16 +15,36 @@ const BASE_API_URL =
 const OPL_BASE_URL = 'https://openpracticelibrary.com/practice/'
 
 
-const fields = [
-  'title',
-  'subtitle',
-  'area',
-  'people',
-  'time',
-  'difficulty',
-  'participants',
-  'url'
-];
+const fields = [{
+  label: 'title',
+  value: 'title',
+  default: ''
+}, {
+  label: 'subtitle',
+  value: 'subtitle',
+  default: ''
+}, {
+  label: '@area',
+  value: 'area',
+  default: ''
+}, {
+  label: 'time',
+  value: 'time',
+  default: ''
+}, {
+  label: 'difficulty',
+  value: 'difficulty',
+  default: ''
+}, {
+  label: 'participants',
+  value: 'participants',
+  default: ''
+}, {
+  label: '#url',
+  value: 'url',
+  default: ''
+}];
+
 const opts = {
   fields
 };
@@ -64,8 +84,13 @@ router.get('/data', (req, res) => {
             );
             let content = fm(fileContent);
             // trim extra stuff from the metadata
+            // FRONT OF CARD
+            let frontArea = `front-${content.attributes.area}.ai`;
+            let backArea = `back-${content.attributes.area}.ai`;
+            content.attributes.area = frontArea;
             delete content.attributes.date;
             delete content.attributes.authors;
+            delete content.attributes.people;
             delete content.attributes.icon;
             delete content.attributes.jumbotron;
             delete content.attributes.jumbotronAlt;
@@ -73,9 +98,20 @@ router.get('/data', (req, res) => {
             content.attributes.participants = content.attributes.participants ?
               content.attributes.participants.join('#') :
               '';
-            let name = allFileLocations[index].name.substring(0, allFileLocations[index].name.length - 3)
-            content.attributes.url = `${OPL_BASE_URL}${name}/`;
+            const backOfCard = Object.assign({}, content.attributes);
+
+
             response.push(content.attributes);
+
+            // BACK OF CARD
+            let name = allFileLocations[index].name.substring(0, allFileLocations[index].name.length - 3)
+            backOfCard.url = `${OPL_BASE_URL}${name}/`;
+            delete backOfCard.subtitle;
+            backOfCard.area = backArea;
+            delete backOfCard.time;
+            delete backOfCard.difficulty;
+            delete backOfCard.participants;
+            response.push(backOfCard);
           });
           // TODO - add parser for CSV
           const csv = parse(response, opts);

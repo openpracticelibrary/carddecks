@@ -36,3 +36,4 @@ jspm_packages
 
 # Out put dir for built functions
 lamda
+*.csv
