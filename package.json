@@ -14,12 +14,11 @@
     "express": "^4.17.1",
     "netlify-lambda": "^1.6.3",
     "nodemon": "^1.19.2",
-    "serverless-http": "^2.3.0"
-  },
-  "dependencies": {
+    "serverless-http": "^2.3.0",
     "axios": "^0.19.2",
-    "express": "^4.17.1",
     "json2csv": "^4.5.4",
     "parser-front-matter": "^1.6.4"
+  },
+  "dependencies": {
   }
 }
