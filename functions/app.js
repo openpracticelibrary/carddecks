@@ -8,12 +8,12 @@ const router = express.Router();
 const {
   parse
 } = require('json2csv');
+const bufferFrom = require('buffer-from')
 
 const BASE_API_URL =
   'https://api.github.com/repos/openpracticelibrary/openpracticelibrary/contents/content/practice?ref=master';
 const OPL_BASE_URL = 'https://openpracticelibrary.com/practice/'
 
-let allFilePaths = [];
 
 const fields = [
   'title',
@@ -46,7 +46,7 @@ const someurls = [
 ];
 
 router.get('/data', (req, res) => {
-
+  let allFilePaths = [];
   let allFileLocations = [];
   axios.get(BASE_API_URL, options).then(fileLocations => {
       // console.log(fileLocations)
@@ -59,7 +59,7 @@ router.get('/data', (req, res) => {
         .then(allFileContents => {
           let response = [];
           allFileContents.forEach((item, index) => {
-            const fileContent = new Buffer(item.data.content, 'base64').toString(
+            const fileContent = bufferFrom(item.data.content, 'base64').toString(
               'ascii'
             );
             let content = fm(fileContent);
@@ -73,9 +73,6 @@ router.get('/data', (req, res) => {
             content.attributes.participants = content.attributes.participants ?
               content.attributes.participants.join('#') :
               '';
-            // add url
-            // TODO - FIX URL with correct filename
-
             let name = allFileLocations[index].name.substring(0, allFileLocations[index].name.length - 3)
             content.attributes.url = `${OPL_BASE_URL}${name}/`;
             response.push(content.attributes);
