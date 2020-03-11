@@ -52,10 +52,10 @@ description - Personalised both sides. Printed full Colour & Plastic Coated. Cut
 Size -88 x 63mm with radius corners.
 
 Specification:
-- 74 Cards per pack.
+- 79 Cards per pack.
 - Cello wrapping not included.
 - Artwork supplied by client to fit our templates in PDF Format.
 - Printing: Full Colour and Plastic Coated.
 - Material: Heretic 305gsm Black Cored Playing Card Board.
-- Instruction Leaflets: Poker card sized 16 page leaflet, printed double sided on 110gsm silk art.
+- Instruction Leaflets: No leaflet
 - Tuck Boxes: Inserted in to personalised tuck boxes printed full colour on 350gsm Zanta Box Board matte laminated.
