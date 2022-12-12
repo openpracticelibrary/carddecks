@@ -11,7 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.19.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "front-matter": "^3.1.0",
     "json2csv": "^4.5.4",
     "netlify-lambda": "^1.6.3",
